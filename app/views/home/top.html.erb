@@ -1,2 +1,399 @@
-<h1>Home#top</h1>
-<p>Find me in app/views/home/top.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Modern Business - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/assets/home.scss" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <%# 左側サイト名 %>
+      <a class="navbar-brand" href="/">My Portfolio</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <%# /左側サイト名 %>
+
+      <%# 右側プルダウンなど %>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <%# <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li> %>
+          <%# <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li> %>
+
+          <%# ポートフォリオのプルダウン %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Portfolio
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="https://furima-34566.herokuapp.com/" target="_blank" rel="noopener noreferrer">1 フリマアプリ　コピーサイト</a>
+              <a class="dropdown-item" href="https://samanosuke-akechi.github.io/motorcycle-game-34566/build/index.html" target="_blank" rel="noopener noreferrer">2 横スクロールバイクゲーム</a>
+              <%# 以下プルダウンのフォーマット target="_blank" rel="noopener noreferrer"はセキュリティ対策 %>
+              <%# <a class="dropdown-item" href="portfolio-1-col.html" target="_blank" rel="noopener noreferrer">1 Column Portfolio</a> %>
+              <%# ポートフォリオ一覧へのボタンにする予定 %>
+              <%# <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a> %>
+            </div>
+          </li>
+          <%# /ポートフォリオのプルダウン %>
+          
+          <%# アウトプットのプルダウンにする予定 %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Outputs
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="blog-home-1.html">Output 1</a>
+              <a class="dropdown-item" href="blog-home-2.html">Output 2</a>
+              <a class="dropdown-item" href="blog-post.html">Outputs List</a>
+            </div>
+          </li>
+          <%# /アウトプットのプルダウンにする予定 %>
+
+          <%# <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Blog
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
+              <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
+              <a class="dropdown-item" href="blog-post.html">Blog Post</a>
+            </div>
+          </li> %>
+          <%# <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Other Pages
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
+              <a class="dropdown-item" href="full-width.html">Full Width Page</a>
+              <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
+              <a class="dropdown-item" href="faq.html">FAQ</a>
+              <a class="dropdown-item" href="404.html">404</a>
+              <a class="dropdown-item" href="pricing.html">Pricing Table</a>
+            </div>
+          </li> %>
+        </ul>
+      </div>
+      <%# /右側プルダウンなど %>
+    </div>
+  </nav>
+
+  <header>
+    <%# カルーセル %>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <%# スライドの動きに関する記述だと思う(カルーセルの位置を表示するのに関係してそう) %>
+        <%# 追加するときはコメントアウトを外すかコピーする(data-slide-toの値) %>
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <%# <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> %>
+        <%# <li data-target="#carouselExampleIndicators" data-slide-to="3"></li> %>
+        <%# /スライドの動きに関する記述だと思う %>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <%# スライドのバックグラウンドイメージやテキストなど %>
+        <div class="carousel-item active" style="background-image: url('/assets/furima-screenshot.jpeg');">
+          <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,.7);">
+            <a href="https://furima-34566.herokuapp.com/" target="_blank" rel="noopener noreferrer" style="decoration: none; color: white;">
+              <h3>フリマアプリ　コピーサイト</h3>
+              <p>テックキャンプの最終課題で作成したフリマアプリのコピーサイトです。</p>
+            </a>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('/assets/motorcycle-game-screenshot.png')">
+          <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,.7);">
+            <a href="https://samanosuke-akechi.github.io/motorcycle-game-34566/build/index.html" target="_blank" rel="noopener noreferrer" style="decoration: none; color: white;">
+              <h3>横スクロールバイクゲーム</h3>
+              <p>フロントエンド言語のみで作った横スクロールバイクゲームです。</p>
+            </a>
+          </div>
+        </div>
+        <%# 追加するときはコメントアウトを外すかコピーする(画像のパスとリンク先を入れること) %>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <%# <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,.7);">
+            <a href="リンク先を入れる" target="_blank" rel="noopener noreferrer" style="decoration: none; color: white;">
+              <h3>Third Slide</h3>
+              <p>This is a description for the third slide.</p>
+            </a>
+          </div>
+        </div> %>
+        <%# <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-caption d-none d-md-block" style="background: rgba(0,0,0,.7);">
+            <a href="リンク先を入れる" target="_blank" rel="noopener noreferrer" style="decoration: none; color: white;">
+              <h3>Third Slide</h3>
+              <p>This is a description for the third slide.</p>
+            </a>
+          </div>
+        </div> %>
+        <%# /スライドのバックグラウンドイメージやテキストなど %>
+      </div>
+      <%# カルーセルの左右の操作 %>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="background: rgba(0,0,0,.5);">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="background: rgba(0,0,0,.5);">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <%# /カルーセルの左右の操作 %>
+    </div>
+    <%# /カルーセル %>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <h1 class="my-4" style="font-family: cursive;">Welcome to My Playground</h1>
+
+    <h2 style="font-family: cursive;">Self Introduction</h2>
+
+      <p style="line-height: 2;">
+        こんにちは。
+        <br>
+        プログラミング初学者の山浦と言います。
+        <br>
+        前職は製造業で約3年半勤務。何か新しいこと、面白いことをやってみたいと思っていた時に、YouTubeでエンジニア系の動画を見て興味を抱き、何気なくProgateでプログラミングに触れて存外はまってしまいました。思い切って本格的に学ぼうと（株）divさんのTECH CAMPでプログラミング学習を始めました。まだまだ拙いですが、HTML、CSS、JavaScript、Rubyの基礎を学習。Ruby on Railsを使用して、Webアプリケーションの作成もやっております。
+        <br>
+        エンジニアとしての知識とスキルを向上させるため、日々学習に邁進しております。
+        <br>
+        <br>
+        当サイトでは、私のポートフォリオの掲載とプログラミング学習のアウトプットを行っております。
+        <br>
+        よろしければ見ていってください。
+      </p>
+
+    <!-- Marketing Icons Section -->
+    <%# とりあえずコメントアウト %>
+    <%# <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Card Title</h4>
+          <div class="card-body">
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Card Title</h4>
+          <div class="card-body">
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+          <h4 class="card-header">Card Title</h4>
+          <div class="card-body">
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div> %>
+    <!-- /.row -->
+
+    <!-- Portfolio Section -->
+    <h2 style="font-family: cursive;">Portfolio List</h2>
+
+    <div class="row">
+      <%# ポートフォリオ一覧 %>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="https://furima-34566.herokuapp.com/" target="_blank" rel="noopener noreferrer" style="background: rgba(0,0,0,.7);">
+            <div style="height: 200px; display: flex; justify-content: center;">
+              <img class="card-img-top" src="/assets/furima-screenshot.jpeg" alt="ポートフォリオ画像" style=" object-fit: contain;">
+            </div>
+          </a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="https://furima-34566.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+                フリマアプリ　コピーサイト
+              </a>
+            </h4>
+            <p class="card-text">テックキャンプの最終課題で実装したフリマアプリのコピーサイトです。Ruby on Railsを使用して実装しています。主要機能としてはユーザー新規登録・ログイン・ログアウト、商品の出品、商品の購入（PAY.JPのAPIを利用したクレジットカード決済）になります。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="https://samanosuke-akechi.github.io/motorcycle-game-34566/build/index.html" target="_blank" rel="noopener noreferrer" style="background: rgba(0,0,0,.7);">
+            <div style="height: 200px; display: flex; justify-content: center;">
+              <img class="card-img-top" src="/assets/motorcycle-game-screenshot.png" alt="ポートフォリオ画像" style=" object-fit: contain;">
+            </div>
+          </a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="https://samanosuke-akechi.github.io/motorcycle-game-34566/build/index.html" target="_blank" rel="noopener noreferrer">
+                横スクロールバイクゲーム
+              </a>
+            </h4>
+            <p class="card-text">フロントエンド言語のみで実装した横スクロールバイクゲームです。</p>
+          </div>
+        </div>
+      </div>
+      <%# ポートフォリを追加する時はコメントアウトを外すかコピー %>
+      <%# <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#" target="_blank" rel="noopener noreferrer" style="background: rgba(0,0,0,.7);>
+            <div style="height: 200px; display: flex; justify-content: center;">
+              <img class="card-img-top" src="http://placehold.it/700x400" alt="" style=" object-fit: contain;">
+            </div>
+          </a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Project Three
+              </a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+          </div>
+        </div>
+      </div> %>
+      <%# <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#" target="_blank" rel="noopener noreferrer" style="background: rgba(0,0,0,.7);>
+            <div style="height: 200px; display: flex; justify-content: center;">
+              <img class="card-img-top" src="http://placehold.it/700x400" alt="" style=" object-fit: contain;">
+            </div>
+          </a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Project Four
+              </a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+        </div>
+      </div> %>
+      <%# <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#" target="_blank" rel="noopener noreferrer" style="background: rgba(0,0,0,.7);>
+            <div style="height: 200px; display: flex; justify-content: center;">
+              <img class="card-img-top" src="http://placehold.it/700x400" alt="" style=" object-fit: contain;">
+            </div>
+          </a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Project Five
+              </a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+          </div>
+        </div>
+      </div> %>
+      <%# <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <a href="#" target="_blank" rel="noopener noreferrer" style="background: rgba(0,0,0,.7);>
+            <div style="height: 200px; display: flex; justify-content: center;">
+              <img class="card-img-top" src="http://placehold.it/700x400" alt="" style=" object-fit: contain;">
+            </div>
+          </a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Project Six
+              </a>
+            </h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
+          </div>
+        </div>
+      </div> %>
+      <%# /ポートフォリオ一覧 %>
+    </div>
+    <!-- /.row -->
+
+    <h2 style="font-family: cursive;">Outputs List</h2>
+
+    
+
+    <!-- Features Section -->
+    <%# とりあえずコメントアウト %>
+    <%# <div class="row">
+      <div class="col-lg-6">
+        <h2>Modern Business Features</h2>
+        <p>The Modern Business template by Start Bootstrap includes:</p>
+        <ul>
+          <li>
+            <strong>Bootstrap v4</strong>
+          </li>
+          <li>jQuery</li>
+          <li>Font Awesome</li>
+          <li>Working contact form with validation</li>
+          <li>Unstyled page elements for easy customization</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+      </div>
+      <div class="col-lg-6">
+        <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+      </div>
+    </div> %>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Call to Action Section -->
+    <%# とりあえずコメントアウト %>
+    <%# <div class="row mb-4">
+      <div class="col-md-8">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+      </div>
+      <div class="col-md-4">
+        <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
+      </div>
+    </div> %>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; My Playground 2021</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <%# <script src="/javascript/jquery.min.js"></script> %>
+  <%# <script src="/javascript/packs/bootstrap.bundle.min.js"></script> %>
+
+</body>
+
+</html>
