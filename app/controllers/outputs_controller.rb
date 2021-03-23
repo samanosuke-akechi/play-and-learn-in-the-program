@@ -1,4 +1,6 @@
 class OutputsController < ApplicationController
+  before_action :restriction, except: [:index, :show]
+  
   def index
     @outputs = Output.includes(:user).order("created_at DESC")
   end
@@ -21,5 +23,11 @@ class OutputsController < ApplicationController
 
   def output_params
     params.require(:output).permit(:title, :text).merge(user_id: current_user.id)
+  end
+
+  def restriction
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 end
