@@ -5,7 +5,7 @@
   <% @outputs.each do |output| %>
     <li class="output-list">
       <div>
-        <%= output.created_at %>に投稿
+        <%= l(output.created_at, format: :long) %>に投稿
       </div>
       <div>
         <%= output.title %>
