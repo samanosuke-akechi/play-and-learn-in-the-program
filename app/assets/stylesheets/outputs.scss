@@ -23,3 +23,18 @@
   width: 70vw;
   padding: 20px;
 }
+
+
+.output-contents {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.output-list {
+  width: 30vw;
+  border: 1px solid gray;
+  list-style: none;
+  padding-left: 20px;
+  // margin-bottom: 20px;
+}

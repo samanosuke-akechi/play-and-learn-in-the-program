@@ -1,5 +1,6 @@
 class OutputsController < ApplicationController
   def index
+    @outputs = Output.includes(:user).order("created_at DESC")
   end
 
   def new

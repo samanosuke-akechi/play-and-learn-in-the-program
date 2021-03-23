@@ -1,2 +1,16 @@
-<h1>Outputs#index</h1>
-<p>Find me in app/views/outputs/index.html.erb</p>
+<h1>アウトプット一覧</h1>
+
+<div class="output-contents">
+  <ul>
+  <% @outputs.each do |output| %>
+    <li class="output-list">
+      <div>
+        <%= output.created_at %>に投稿
+      </div>
+      <div>
+        <%= output.title %>
+      </div>
+    </li>
+  <% end %>
+  </ul>
+</div>
