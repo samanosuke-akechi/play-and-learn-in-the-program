@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.output-page {
+// 投稿ページ
+.o-form-page {
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
@@ -12,18 +13,18 @@
   text-align: center;
 }
 
-.o-title {
+.o-title-form {
   height: 50px;
   width: 70vw;
   padding: 20px;
 }
 
-.o-text {
+.o-text-form {
   height: 600px;
   width: 70vw;
   padding: 20px;
 }
-
+// 投稿ページ
 
 .output-contents {
   width: 100vw;
@@ -39,7 +40,8 @@
   // margin-bottom: 20px;
 }
 
-
+// アウトプット一覧ページへのリンク
 .output-link {
   color: #1a0dab;
 }
+// アウトプット一覧ページへのリンク
