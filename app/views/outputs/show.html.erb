@@ -1,11 +1,22 @@
 <%= render 'shared/second_header' %>
 
+<% if user_signed_in? %>
+  <div class="o-show-top">
+    <%= link_to '編集する', edit_output_path, class: "to-o-edit" %>
+  </div>
+<% end %>
+
 <div class="o-show-page">
   <div class="o-show-contents">
     <div class="o-show-title">
       <b><%= @output.title %></b>
     </div>
     <div class="o-show-created_at">
+      <% if @output.created_at != @output.updated_at %>
+        <div>
+          <%= l(@output.updated_at, format: :long) %>に更新
+        </div>
+      <% end %>
       <%= l(@output.created_at, format: :long) %>に投稿
     </div>
     <div class="o-show-text">

@@ -1,0 +1,21 @@
+<div class='o-form-page'>
+  <div class='o-form'>
+      <h1>アウトプット投稿</h1>
+
+      <%= form_with model: @output, local: true do |f| %>
+        <%= render 'shared/error_messages', model: f.object %>
+      
+        <div>
+          <span>タイトル</span>
+        </div>
+          <%= f.text_field :title, class: "o-title-form" %>
+        <div>
+          <span>本文</span>
+        </div>
+        <%= f.text_area :text, class: "o-text-form" %>
+        <div>
+          <%= f.submit '更新する' %>
+        </div>
+      <% end %>
+  </div>
+</div>
