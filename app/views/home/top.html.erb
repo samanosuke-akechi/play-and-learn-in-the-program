@@ -59,18 +59,24 @@
           </li>
           <%# /ポートフォリオのプルダウン %>
           
-          <%# アウトプットのプルダウンにする予定 %>
+          <%# アウトプットのプルダウン %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Outputs
+              New Outputs
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="blog-home-1.html">Output 1</a>
-              <a class="dropdown-item" href="blog-home-2.html">Output 2</a>
-              <a class="dropdown-item" href="blog-post.html">Outputs List</a>
+              <% num = 1 %>
+              <% @outputs_list.each do |output| %>
+                <%= link_to output_path(output.id), class: "dropdown-item" do %>
+                  <%= "#{num}." %>
+                  <%= output.title %>
+                <% end %>
+                <% num = num + 1 %>
+              <% end %>
+              <%= link_to 'アウトプット一覧', outputs_path, class: "dropdown-item" %>
             </div>
           </li>
-          <%# /アウトプットのプルダウンにする予定 %>
+          <%# /アウトプットのプルダウン %>
 
           <%# <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -352,7 +358,7 @@
 
     <ul>
       <p>最新のアウトプット</p>
-      <% @outputs.each do |output| %>
+      <% @outputs_list.each do |output| %>
         <li class="output-list">
           <div>
             <%= l(output.created_at, format: :long) %>に投稿
