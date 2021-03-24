@@ -2,7 +2,9 @@
 
 <% if user_signed_in? %>
   <div class="o-show-top">
-    <%= link_to '編集する', edit_output_path, class: "to-o-edit" %>
+    <%= link_to '編集する', edit_output_path, class: "link" %>
+    /
+    <%= link_to '削除する', output_path(@output.id), method: :delete, class: "link" %>
   </div>
 <% end %>
 
@@ -29,11 +31,11 @@
 
   <div class="o-show-footer">
     <div class="o-footer-link">
-      <%= link_to 'アウトプット一覧に戻る', outputs_path, class: "to-o-index" %>
+      <%= link_to 'アウトプット一覧に戻る', outputs_path, class: "link" %>
     </div>
     /
     <div class="o-footer-link">
-      <%= link_to 'トップページに戻る', root_path, class: "to-top" %>
+      <%= link_to 'トップページに戻る', root_path, class: "link" %>
     </div>
   </div>
 
