@@ -19,6 +19,10 @@ class OutputsController < ApplicationController
     end
   end
 
+  def show
+    @output = Output.find(params[:id])
+  end
+
   private
 
   def output_params

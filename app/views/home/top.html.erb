@@ -358,7 +358,9 @@
             <%= l(output.created_at, format: :long) %>に投稿
           </div>
           <div class="o-index-title">
-            <b><%= output.title %></b>
+            <%= link_to output_path(output.id) do %>
+              <b><%= output.title %></b>
+            <% end %>
           </div>
         </li>
       <% end %>
