@@ -50,19 +50,10 @@
   color: black;
 }
 
-  // アウトプット一覧ページへのリンク(詳細ページも含む)
-.output-link {
-  color: #1a0dab;
-}
-
 .o-index-footer {
   padding: 30px 0;
   display: flex;
   justify-content: center;
-}
-
-.to-top {
-  color: #1a0dab;
 }
 
 // 一覧ページ(トップページに表示される分も含む)
@@ -101,3 +92,22 @@
 }
 
 // 詳細ページ
+
+
+// リンク関係
+
+.o-footer-link {
+  margin: 0 20px;
+}
+
+  // 一覧ページへのリンク
+.to-o-index {
+  color: #1a0dab;
+}
+
+  // トップページへのリンク
+.to-top {
+  color: #1a0dab;
+}
+
+// リンク関係
