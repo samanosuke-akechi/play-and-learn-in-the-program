@@ -1,5 +1,6 @@
 class OutputsController < ApplicationController
   before_action :restriction, except: [:index, :show]
+  before_action :set_outputs_list, only: [:index, :show]
   
   def index
     @outputs = Output.includes(:user).order("created_at DESC")
@@ -19,6 +20,10 @@ class OutputsController < ApplicationController
     end
   end
 
+  def show
+    @output = Output.find(params[:id])
+  end
+
   private
 
   def output_params
@@ -30,4 +35,9 @@ class OutputsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def set_outputs_list
+    @outputs_list = Output.includes(:user).order("created_at DESC").limit(5)
+  end
+  
 end

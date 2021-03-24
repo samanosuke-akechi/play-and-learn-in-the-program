@@ -1,0 +1,29 @@
+<%= render 'shared/second_header' %>
+
+<div class="o-show-page">
+  <div class="o-show-contents">
+    <div class="o-show-title">
+      <b><%= @output.title %></b>
+    </div>
+    <div class="o-show-created_at">
+      <%= l(@output.created_at, format: :long) %>に投稿
+    </div>
+    <div class="o-show-text">
+      <%= markdown(@output.text).html_safe %>
+    </div>
+  </div>
+</div>
+
+<footer>
+
+  <div class="o-show-footer">
+    <div class="o-footer-link">
+      <%= link_to 'アウトプット一覧に戻る', outputs_path, class: "to-o-index" %>
+    </div>
+    /
+    <div class="o-footer-link">
+      <%= link_to 'トップページに戻る', root_path, class: "to-top" %>
+    </div>
+  </div>
+
+</footer>

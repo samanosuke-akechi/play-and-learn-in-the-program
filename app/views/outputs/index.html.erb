@@ -1,19 +1,30 @@
-<h1>アウトプット一覧</h1>
+<%= render 'shared/second_header' %>
 
-<div class="output-contents">
-  <ul>
-  <% @outputs.each do |output| %>
-    <li class="output-list">
-      <div>
-        <%= l(output.created_at, format: :long) %>に投稿
-      </div>
-      <div>
-        <%= output.title %>
-      </div>
-      <%# <div> %>
-        <%#= markdown(output.text).html_safe %>
-      <%# </div> %>
-    </li>
-  <% end %>
-  </ul>
+<div class="o-index-page">
+  <h1>アウトプット一覧</h1>
+
+  <div class="output-contents">
+    <ul>
+    <% @outputs.each do |output| %>
+      <li class="output-list">
+        <div>
+          <%= l(output.created_at, format: :long) %>に投稿
+        </div>
+        <%= link_to output_path(output.id) do %>
+          <div class="o-index-title">
+            <b><%= output.title %></b>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
 </div>
+
+<footer>
+
+  <div class="o-index-footer">
+    <%= link_to 'トップページに戻る', root_path, class: "to-top" %>
+  </div>
+
+</footer>

@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.output-page {
+// 投稿ページ
+
+.o-form-page {
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
@@ -12,21 +14,30 @@
   text-align: center;
 }
 
-.o-title {
+.o-title-form {
   height: 50px;
   width: 70vw;
   padding: 20px;
 }
 
-.o-text {
+.o-text-form {
   height: 600px;
   width: 70vw;
   padding: 20px;
 }
 
+// 投稿ページ
+
+
+// 一覧ページ(トップページに表示される分も含む)
+
+.o-index-page {
+  padding: 20px;
+}
 
 .output-contents {
   width: 100vw;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
 }
@@ -36,5 +47,73 @@
   border: 1px solid gray;
   list-style: none;
   padding-left: 20px;
-  // margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
+.o-index-title {
+  font-size: 20px;
+  color: black;
+}
+
+.o-index-footer {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+// 一覧ページ(トップページに表示される分も含む)
+
+
+// 詳細ページ
+
+.o-show-page {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.o-show-contents {
+  width: 60vw;
+  border: 1px solid gray;
+  display: inline-block;
+  padding:20px;
+}
+
+.o-show-title {
+  font-size: 30px;
+}
+
+.o-show-created_at {
+  text-align: right; 
+}
+
+.o-show-text {
+  margin-top: 30px;
+}
+
+.o-show-footer {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+// 詳細ページ
+
+
+// リンク関係
+
+.o-footer-link {
+  margin: 0 20px;
+}
+
+  // 一覧ページへのリンク
+.to-o-index {
+  color: #1a0dab;
+}
+
+  // トップページへのリンク
+.to-top {
+  color: #1a0dab;
+}
+
+// リンク関係
