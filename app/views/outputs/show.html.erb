@@ -1,5 +1,11 @@
 <%= render 'shared/second_header' %>
 
+<% if user_signed_in? %>
+  <div class="o-show-top">
+    <%= link_to '編集する', edit_output_path, class: "to-o-edit" %>
+  </div>
+<% end %>
+
 <div class="o-show-page">
   <div class="o-show-contents">
     <div class="o-show-title">

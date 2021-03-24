@@ -24,6 +24,19 @@ class OutputsController < ApplicationController
     @output = Output.find(params[:id])
   end
 
+  def edit
+    @output = Output.find(params[:id])
+  end
+
+  def update
+    @output = Output.find(params[:id])
+    if @output.update(output_params)
+      redirect_to action: :show
+    else
+      render :edit
+    end
+  end
+
   private
 
   def output_params
