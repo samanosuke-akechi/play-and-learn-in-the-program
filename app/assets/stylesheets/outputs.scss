@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // 投稿ページ
+
 .o-form-page {
   margin-bottom: 50px;
   display: flex;
@@ -24,7 +25,11 @@
   width: 70vw;
   padding: 20px;
 }
+
 // 投稿ページ
+
+
+// 一覧ページ(トップページに表示される分も含む)
 
 .output-contents {
   width: 100vw;
@@ -37,11 +42,16 @@
   border: 1px solid gray;
   list-style: none;
   padding-left: 20px;
-  // margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-// アウトプット一覧ページへのリンク
+.o-index-title {
+  font-size: 20px;
+}
+
+  // アウトプット一覧ページへのリンク(詳細ページも含む)
 .output-link {
   color: #1a0dab;
 }
-// アウトプット一覧ページへのリンク
+
+// 一覧ページ(トップページに表示される分も含む)
