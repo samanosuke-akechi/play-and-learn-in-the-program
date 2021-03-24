@@ -37,6 +37,11 @@ class OutputsController < ApplicationController
     end
   end
 
+  def destroy
+    Output.destroy(params[:id])
+    redirect_to action: :index
+  end
+
   private
 
   def output_params
