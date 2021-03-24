@@ -1,1 +1,13 @@
-Hello World
+<div class="o-show-page">
+  <div class="o-show-contents">
+    <div class="o-show-title">
+      <b><%= @output.title %></b>
+    </div>
+    <div class="o-show-created_at">
+      <%= l(@output.created_at, format: :long) %>に投稿
+    </div>
+    <div class="o-show-text">
+      <%= markdown(@output.text).html_safe %>
+    </div>
+  </div>
+</div>
