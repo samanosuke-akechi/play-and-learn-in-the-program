@@ -1,6 +1,7 @@
 class OutputsController < ApplicationController
   before_action :restriction, except: [:index, :show]
   before_action :set_outputs_list, only: [:index, :show]
+  before_action :set_output, only: [:show, :edit, :update]
   
   def index
     @outputs = Output.includes(:user).order("created_at DESC")
@@ -21,15 +22,12 @@ class OutputsController < ApplicationController
   end
 
   def show
-    @output = Output.find(params[:id])
   end
 
   def edit
-    @output = Output.find(params[:id])
   end
 
   def update
-    @output = Output.find(params[:id])
     if @output.update(output_params)
       redirect_to action: :show
     else
@@ -56,6 +54,10 @@ class OutputsController < ApplicationController
 
   def set_outputs_list
     @outputs_list = Output.includes(:user).order("created_at DESC").limit(5)
+  end
+
+  def set_output
+    @output = Output.find(params[:id])
   end
   
 end
