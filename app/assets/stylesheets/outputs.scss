@@ -50,6 +50,14 @@
   margin-bottom: 10px;
 }
 
+.o-index-date {
+  display: flex;
+}
+
+.o-index-updated_at {
+  margin-right: 10px;
+}
+
 .o-index-title {
   font-size: 20px;
   color: black;
@@ -119,7 +127,7 @@
 .to-top {
   color: #1a0dab;
 }
-
+  // 編集ページへのリンク
 .to-o-edit {
   color: #1a0dab;
 }

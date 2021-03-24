@@ -360,8 +360,16 @@
       <p>最新のアウトプット</p>
       <% @outputs_list.each do |output| %>
         <li class="output-list">
-          <div>
-            <%= l(output.created_at, format: :long) %>に投稿
+          <div class="o-index-date">
+            <% if output.created_at != output.updated_at %>
+              <div class="o-index-updated_at">
+                <%= l(output.updated_at, format: :long) %>に更新
+              /
+              </div>
+            <% end %>
+            <div>
+              <%= l(output.created_at, format: :long) %>に投稿
+            </div>
           </div>
           <%= link_to output_path(output.id) do %>
             <div class="o-index-title">

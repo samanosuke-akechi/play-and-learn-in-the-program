@@ -12,6 +12,11 @@
       <b><%= @output.title %></b>
     </div>
     <div class="o-show-created_at">
+      <% if @output.created_at != @output.updated_at %>
+        <div>
+          <%= l(@output.updated_at, format: :long) %>に更新
+        </div>
+      <% end %>
       <%= l(@output.created_at, format: :long) %>に投稿
     </div>
     <div class="o-show-text">
