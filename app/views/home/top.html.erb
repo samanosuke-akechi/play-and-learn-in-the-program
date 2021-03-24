@@ -350,7 +350,21 @@
 
     <h2 style="font-family: cursive;">Outputs List</h2>
 
-    
+    <ul>
+      <p>最新のアウトプット</p>
+      <% @outputs.each do |output| %>
+        <li class="output-list">
+          <div>
+            <%= l(output.created_at, format: :long) %>に投稿
+          </div>
+          <div>
+            <%= output.title %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+
+      <%= link_to 'アウトプット一覧ページへ', outputs_path, method: :get, class: "output-link" %>
 
     <!-- Features Section -->
     <%# とりあえずコメントアウト %>
