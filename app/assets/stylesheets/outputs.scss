@@ -31,8 +31,13 @@
 
 // 一覧ページ(トップページに表示される分も含む)
 
+.o-index-page {
+  padding: 20px;
+}
+
 .output-contents {
   width: 100vw;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
 }
@@ -62,6 +67,7 @@
 // 詳細ページ
 
 .o-show-page {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
 }
