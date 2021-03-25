@@ -34,14 +34,17 @@ https://play-and-learn-in-the-program.herokuapp.com/
 ヘッダー右側にポートフォリオとアウトプットのプルダウンがあり、アウトプットに関しては最新の投稿5件が表示されるようになっています。
 ポートフォリオとアウトプットのタイトルをクリックするとそれぞれのページへと遷移します。
 また、ヘッダーのすぐ下のカルーセルにはポートフォリオをスクリーンショットとともに載せており、タイトルまたは説明文をクリックすると各アプリケーションへと遷移します。
+
 ![top-page_pull-down2](https://user-images.githubusercontent.com/78411965/112437156-fbd4df00-8d89-11eb-92e8-fb0c62c8eccf.gif)
 
 トップページをスクロールすると、簡単な自己紹介文とポートフォリオ及びアウトプットのそれぞれの一覧があります。
+
 ![top-page_preview2](https://user-images.githubusercontent.com/78411965/112438644-7a7e4c00-8d8b-11eb-9a0c-7687431f3829.gif)
 
 ## ポートフォリオ
 ポートフォリオ一覧の画像またはタイトルをクリックするとそのアプリケーションのページに遷移します。
 ヘッダーのプルダウンまたはカルーセルからも遷移できるようになっています。
+
 ![top-page_portfolio2](https://user-images.githubusercontent.com/78411965/112440747-03968280-8d8e-11eb-8c8f-6bf8197c2ff0.gif)
 
 ## アウトプット
