@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: heroku_ex_development
+  database: play_and_learn_in_the_program_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: heroku_ex_test
+  database: play_and_learn_in_the_program_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: heroku_ex_production
-  username: heroku_ex
-  password: <%= ENV['HEROKU_EX_DATABASE_PASSWORD'] %>
+  database: play_and_learn_in_the_program_production
+  username: play_and_learn_in_the_program
+  password: <%= ENV['PLAY_AND_LEARN_IN_THE_PROGRAM_DATABASE_PASSWORD'] %>
