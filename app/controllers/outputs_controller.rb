@@ -15,7 +15,8 @@ class OutputsController < ApplicationController
     @output = Output.new(output_params)
     if @output.valid?
       @output.save
-      redirect_to root_path
+      output = Output.order(created_at: :desc).limit(1)
+      redirect_to output_path(output.ids)  # output_path(output[0][:id])と書き換えることもできる
     else
       render :new
     end
