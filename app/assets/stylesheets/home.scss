@@ -6,6 +6,14 @@ body {
   padding-top: 56px;
 }
 
+// カルーセル一覧
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+// ----- カルーセル ----- //
+
+// カルーセル全体
 .carousel-item {
   height: 65vh;
   min-height: 300px;
@@ -16,6 +24,52 @@ body {
   background-size: cover;
 }
 
-.portfolio-item {
-  margin-bottom: 30px;
+// ポートフォリオ画像
+.p-img1 {
+  background-image: url('/assets/furima-screenshot.jpeg');
 }
+
+.p-img2 {
+  background-image: url('/assets/motorcycle-game-screenshot.png');
+}
+
+.p-img3 {
+  background-image: url('/assets/quiz-game.png');
+}
+
+// ポートフォリオのタイトルと概要の枠
+.carousel-caption {
+  background: rgba(0,0,0,.7);
+  a {
+    color: white;
+  }
+}
+
+// カルーセルの左右操作部分
+.carousel-control-prev {
+  background: rgba(0,0,0,.5);
+}
+
+.carousel-control-next {
+  background: rgba(0,0,0,.5);
+}
+
+// ----- カルーセル ----- //
+
+// ----- ポートフォリオ一覧 ----- //
+
+.card {
+  // ポートフォリオ画像の背景
+  .card-img {
+    background: rgba(0,0,0,.7);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+  }
+  // 画像部分
+  .card-img-top {
+    object-fit: contain;
+  }
+}
+
+// ----- ポートフォリオ一覧 ----- //
