@@ -53,3 +53,23 @@ body {
 .carousel-control-next {
   background: rgba(0,0,0,.5);
 }
+
+// ----- カルーセル ----- //
+
+// ----- ポートフォリオ一覧 ----- //
+
+.card {
+  // ポートフォリオ画像の背景
+  .card-img {
+    background: rgba(0,0,0,.7);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+  }
+  // 画像部分
+  .card-img-top {
+    object-fit: contain;
+  }
+}
+
+// ----- ポートフォリオ一覧 ----- //
