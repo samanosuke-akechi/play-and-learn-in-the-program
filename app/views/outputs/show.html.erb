@@ -4,7 +4,7 @@
   <div class="o-show-top">
     <%= link_to '編集する', edit_output_path, class: "link" %>
     /
-    <%= link_to '削除する', output_path(@output.id), method: :delete, class: "link" %>
+    <%= link_to '削除する', output_path(@output.id), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "link" %>
   </div>
 <% end %>
 
