@@ -16,7 +16,7 @@
     "postcss": "^8.2.10",
     "trim-newlines": "^3.0.1",
     "turbolinks": "^5.2.0",
-    "ws": "^6.2.2"
+    "ws": "^6.2.3"
   },
   "version": "0.1.0",
   "devDependencies": {
